@@ -1,3 +1,10 @@
+/** SERVICIO DE PROPIEDADES 
+    *Utiliza:
+     * mock-properties.ts            --> donde estan almacenado los datos
+     * property-service-mock.ts      
+     * property-service-rest.ts      --> .json                                 --> en el que estamos
+*/
+
 import {Injectable} from '@angular/core';
 import {Http, Headers, RequestOptions} from '@angular/http';
 import {SERVER_URL} from './config';

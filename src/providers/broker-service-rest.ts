@@ -1,3 +1,10 @@
+/**SERVICIO DE  AGENTES COMERCIALES
+    *Utiliza:
+     * mock-brokers.ts            --> donde estan almacenado los datos       
+     * broker-service-mock.ts      
+     * broker-service-rest.ts     --> .json                             --> en el que estamos
+*/
+
 import 'rxjs/Rx';
 import {Injectable} from '@angular/core';
 import {SERVER_URL} from './config';

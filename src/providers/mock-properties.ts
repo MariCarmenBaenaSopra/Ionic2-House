@@ -1,5 +1,9 @@
-/** SERVICIO DE PROPIEDADES */
-
+/** SERVICIO DE PROPIEDADES 
+    *Utiliza:
+     * mock-properties.ts            --> en el que estamos
+     * property-service-mock.ts
+     * property-service-rest.ts      --> .json
+*/
 let properties: Array<any> = [
     {
         id: 1,

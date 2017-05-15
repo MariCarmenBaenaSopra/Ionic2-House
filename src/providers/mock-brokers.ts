@@ -1,4 +1,9 @@
-/**SERVICIO DE  AGENTES COMERCIALES*/
+/**SERVICIO DE  AGENTES COMERCIALES
+    *Utiliza:
+     * mock-brokers.ts            --> donde estan almacenado los datos       --> en el que estamos
+     * broker-service-mock.ts      
+     * broker-service-rest.ts     --> .json                             
+*/
 
 let brokers: Array<any> = [
     {
