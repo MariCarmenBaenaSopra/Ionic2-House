@@ -1,3 +1,5 @@
+/** SERVICIO DE PROPIEDADES */
+
 let properties: Array<any> = [
     {
         id: 1,

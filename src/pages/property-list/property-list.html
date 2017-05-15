@@ -4,8 +4,14 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-searchbar [(ngModel)]="searchKey" (ionInput)="onInput($event)"
-                       (ionCancel)="onCancel($event)"></ion-searchbar>
+        <!--SEARCH-->
+                       <!--[(ngModel)]= searchKey - enlaza el valor de seachKey (esccrito en el SEARCH) con el de .ts -->
+                       <!--(ionInput)="onInput($event) - cada vez que se actualiza el searchKey, se llama a la funcion onInput()-->
+                       <!--(ionCancel)="onCancel($event)- cuando pulsamos la X del buscador para cancelar el filtrado-->
+        <ion-searchbar [(ngModel)]="searchKey" 
+                       (ionInput)="onInput($event)"     
+                       (ionCancel)="onCancel($event)">
+        </ion-searchbar>
     </ion-navbar>
 </ion-header>
 
@@ -14,6 +20,7 @@
     <ion-list *ngIf="viewMode==='list'">
 
         <ion-item-sliding *ngFor="let property of properties">
+           <!--Open House Details-->
             <button ion-item (click)="openPropertyDetail(property)">
                 <ion-thumbnail item-left>
                     <img src="{{property.thumbnail}}"/>
@@ -37,7 +44,8 @@
         <ion-segment-button value="list">
             <ion-icon name="list"></ion-icon>
         </ion-segment-button>
-        <ion-segment-button value="map" (ionSelect)="showMap()">
+        <!--Mostrar el mapa-->
+        <ion-segment-button value="map" (ionSelect)="showMap()">    
             <ion-icon name="map"></ion-icon>
         </ion-segment-button>
     </ion-segment>

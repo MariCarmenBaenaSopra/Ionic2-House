@@ -20,6 +20,7 @@ export class FavoriteListPage {
     }
 
     deleteItem(favorite) {
+        /**unfavorite(favorite) =eliminar de favoritos */
         this.service.unfavorite(favorite)
             .then(() => {
                 this.getFavorites();

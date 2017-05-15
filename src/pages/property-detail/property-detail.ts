@@ -18,10 +18,12 @@ export class PropertyDetailPage {
         );
     }
 
+   /**Agente inmobiliario - abrir */
     openBrokerDetail(broker) {
         this.navCtrl.push(BrokerDetailPage, broker);
     }
 
+/**Guardar en favoritos */
     favorite(property) {
         this.propertyService.favorite(property)
             .then(property => {
@@ -34,7 +36,9 @@ export class PropertyDetailPage {
             });
     }
 
+ /**Compartir */
     share(property) {
+        /**ActionSheet= diálogo que permite al usuario elegir entre un conjunto de opciones. */
         let actionSheet: ActionSheet = this.actionSheetCtrl.create({
             title: 'Share via',
             buttons: [

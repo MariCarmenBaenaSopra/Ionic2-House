@@ -8,9 +8,7 @@ let brokersURL = SERVER_URL + 'brokers/';
 @Injectable()
 export class BrokerService {
 
-    constructor(public http: Http) {
-
-    }
+    constructor(public http: Http) {}
 
     findAll() {
         alert("findall");

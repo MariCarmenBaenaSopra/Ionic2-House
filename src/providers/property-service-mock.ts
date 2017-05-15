@@ -25,12 +25,14 @@ export class PropertyService {
     return Promise.resolve(this.favorites);
   }
 
+/**Guardar en favoritos */
   favorite(property) {
     this.favoriteCounter = this.favoriteCounter + 1;
     this.favorites.push({id: this.favoriteCounter, property: property});
     return Promise.resolve();
   }
 
+/**Eliminar de favoritos */
   unfavorite(favorite) {
     let index = this.favorites.indexOf(favorite);
     if (index > -1) {

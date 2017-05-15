@@ -28,6 +28,7 @@
                 <h3>Asking Price</h3>
                 <ion-note item-right>{{property.price}}</ion-note>
             </ion-item>
+            <!--(click)="openBrokerDetail(property.broker)" - agente inmobiliario-->
             <button ion-item (click)="openBrokerDetail(property.broker)">
                 <ion-avatar item-left>
                     <img src="{{property.broker.picture}}"/>

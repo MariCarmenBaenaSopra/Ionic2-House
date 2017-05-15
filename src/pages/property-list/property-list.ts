@@ -10,8 +10,8 @@ import leaflet from 'leaflet';
 })
 export class PropertyListPage {
 
-    properties: Array<any>;
-    searchKey: string = "";
+    properties: Array<any>;          /**Belong to the service (provider) "PropertyService"*/
+    searchKey: string = "";          /**SEARCH */
     viewMode: string = "list";
     map;
     markersGroup;
@@ -20,10 +20,12 @@ export class PropertyListPage {
         this.findAll();
     }
 
+   /**Open House Details*/
     openPropertyDetail(property: any) {
         this.navCtrl.push(PropertyDetailPage, property);
     }
 
+  /**SEARCH */
     onInput(event) {
         this.service.findByName(this.searchKey)
             .then(data => {
@@ -34,7 +36,7 @@ export class PropertyListPage {
             })
             .catch(error => alert(JSON.stringify(error)));
     }
-
+  /**cancelar el filtrado */
     onCancel(event) {
         this.findAll();
     }
@@ -45,6 +47,7 @@ export class PropertyListPage {
             .catch(error => alert(error));
     }
 
+  /**Mostrar mapa */
     showMap() {
         setTimeout(() => {
             this.map = leaflet.map("map").setView([42.361132, -71.070876], 14);

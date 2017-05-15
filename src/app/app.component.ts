@@ -23,15 +23,16 @@ export class MyApp {
 
     rootPage: any = WelcomePage;
 
-    appMenuItems: Array<MenuItem>;
+    appMenuItems: Array<MenuItem>;        /**Menu: Shop */
 
-    accountMenuItems: Array<MenuItem>;
-
-    helpMenuItems: Array<MenuItem>;
+    accountMenuItems: Array<MenuItem>;    /**Menu: Account */
+    
+    helpMenuItems: Array<MenuItem>;       /**Menu: Help */
 
     constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
         this.initializeApp();
 
+      /**Menu: Shop */
         this.appMenuItems = [
             {title: 'Properties', component: PropertyListPage, icon: 'home'},
             {title: 'Brokers', component: BrokerListPage, icon: 'people'},
@@ -39,11 +40,13 @@ export class MyApp {
             {title: 'Get Preapproved', component: WelcomePage, icon: 'checkmark-circle'},
         ];
 
+      /**Menu: Account */
         this.accountMenuItems = [
             {title: 'My Account', component: WelcomePage, icon: 'ios-contact'},
             {title: 'Logout', component: WelcomePage, icon: 'log-out'},
         ];
 
+      /**Menu: Help */
         this.helpMenuItems = [
             {title: 'Welcome', component: WelcomePage, icon: 'bookmark'},
             {title: 'About', component: AboutPage, icon: 'information-circle'},
@@ -51,7 +54,7 @@ export class MyApp {
 
     }
 
-    initializeApp() {
+    initializeApp() {  /**It's always the same --> initializer the app*/
         this.platform.ready().then(() => {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.

@@ -9,7 +9,7 @@ import {BrokerDetailPage} from '../broker-detail/broker-detail';
 })
 export class BrokerListPage {
 
-    brokers: Array<any>;
+    brokers: Array<any>;    /**Servicio: Agentes comerciales */
 
     constructor(public navCtrl: NavController, public service: BrokerService) {
         service.findAll().then(data => this.brokers = data);
